@@ -12,3 +12,19 @@ import CinematicCamera from './components/CinematicCamera';
 import SectionTransition from './components/SectionTransition';
 import MultiSectionBlend from './components/MultiSectionBlend';
 import './App.css';
+
+export default function App() {
+  return (
+    <>
+      <Cursor />
+     <div
+  style={{
+    width: '100vw',
+    height: '100vh',
+    margin: 0,
+    padding: 0,
+    overflow: 'hidden',
+    background: '#050505',
+    cursor: 'none'
+  }}
+>
