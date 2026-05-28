@@ -35,3 +35,14 @@ export default function App() {
 
           <Suspense fallback={null}>
             <Environment preset="city" />
+
+           <ScrollControls pages={5} damping={0.1}>
+  <CinematicCamera />
+  <Background />
+  <Scene />
+  <MultiSectionBlend /> 
+  <Scroll html style={{ width: '100%' }}>
+    <ScrollProgress />
+    <Overlay />
+  </Scroll>
+</ScrollControls>
