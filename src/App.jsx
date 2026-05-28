@@ -5,3 +5,10 @@ import { EffectComposer, Bloom, ChromaticAberration } from '@react-three/postpro
 import { BlendFunction } from 'postprocessing';
 import Scene from './components/Scene';
 import Overlay from './components/Overlay';
+import Cursor from './components/Cursor';
+import ScrollProgress from './components/ScrollProgress';
+import Background from './components/Background';
+import CinematicCamera from './components/CinematicCamera';
+import SectionTransition from './components/SectionTransition';
+import MultiSectionBlend from './components/MultiSectionBlend';
+import './App.css';
