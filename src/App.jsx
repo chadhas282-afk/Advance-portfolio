@@ -28,3 +28,10 @@ export default function App() {
     cursor: 'none'
   }}
 >
+        <Canvas shadows camera={{ position: [0, 0, 5], fov: 30 }}>
+          <color attach="background" args={['#050505']} />
+          <ambientLight intensity={0.5} />
+          <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
+
+          <Suspense fallback={null}>
+            <Environment preset="city" />
