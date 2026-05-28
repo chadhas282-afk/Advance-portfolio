@@ -46,3 +46,11 @@ export default function App() {
     <Overlay />
   </Scroll>
 </ScrollControls>
+
+            <EffectComposer>
+              <Bloom luminanceThreshold={0.2} mipmapBlur intensity={1.5} />
+              <ChromaticAberration blendFunction={BlendFunction.NORMAL} offset={[0.0015, 0.0015]} />
+            </EffectComposer>
+          </Suspense>
+        </Canvas>
+      </div>
