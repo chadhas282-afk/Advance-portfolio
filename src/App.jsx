@@ -54,3 +54,14 @@ export default function App() {
           </Suspense>
         </Canvas>
       </div>
+
+      <Loader 
+        containerStyles={{ background: '#050505' }} 
+        innerStyles={{ width: '400px', height: '10px' }} 
+        barStyles={{ background: '#4f46e5', height: '10px' }} 
+        dataStyles={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#ffffff', marginTop: '20px' }} 
+        dataInterpolation={(p) => `LOADING EXPERIENCE ${p.toFixed(0)}%`} 
+      />
+    </>
+  );
+}
