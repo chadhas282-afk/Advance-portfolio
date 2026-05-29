@@ -107,3 +107,9 @@ function ShootingStars({ count = 12, area = 80 }) {
         color="#8b5cf6"
         transparent
         opacity={0.9}
+        blending={THREE.AdditiveBlending}
+        depthWrite={false}
+      />
+    </instancedMesh>
+  );
+}
