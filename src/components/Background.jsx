@@ -79,3 +79,12 @@ function ShootingStars({ count = 12, area = 80 }) {
     data.forEach((star, i) => {
       star.position.addScaledVector(star.velocity, delta * star.speed);
       star.life -= delta;
+
+      if (
+        Math.abs(star.position.x) > area ||
+        Math.abs(star.position.y) > area ||
+        Math.abs(star.position.z) > area ||
+        star.life <= 0
+      ) {
+        resetStar(star);
+      }
