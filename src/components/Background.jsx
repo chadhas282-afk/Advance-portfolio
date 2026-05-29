@@ -11,3 +11,11 @@ const GradientDomeMaterial = shaderMaterial(
     uColorMid: new THREE.Color('#1e1b4b'),
     uColorBottom: new THREE.Color('#05060a'),
   },
+    `
+  varying vec3 vWorldPosition;
+  void main() {
+    vec4 worldPosition = modelMatrix * vec4(position, 1.0);
+    vWorldPosition = worldPosition.xyz;
+    gl_Position = projectionMatrix * viewMatrix * worldPosition;
+  }
+  `,
