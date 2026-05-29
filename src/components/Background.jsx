@@ -120,3 +120,23 @@ export default function Background() {
   useFrame((state) => {
     if (domeRef.current) domeRef.current.uTime = state.clock.elapsedTime;
   });
+
+  return (
+    <group>
+      <mesh scale={50}>
+        <sphereGeometry args={[1, 64, 64]} />
+        <gradientDomeMaterial ref={domeRef} side={THREE.BackSide} />
+      </mesh>
+      <Stars
+        radius={80}
+        depth={60}
+        count={3000}
+        factor={2.5}
+        saturation={0}
+        fade
+        speed={0.3}
+      />
+      <ShootingStars />
+    </group>
+  );
+}
