@@ -57,3 +57,9 @@ function ShootingStars({ count = 12, area = 80 }) {
       life: THREE.MathUtils.randFloat(1, 2.5),
     }));
   }, [count, area]);
+
+  const resetStar = (star) => {
+    star.position.set(
+      THREE.MathUtils.randFloatSpread(area),
+      THREE.MathUtils.randFloat(area * 0.2, area * 0.5),
+      THREE.MathUtils.randFloatSpread(area)
