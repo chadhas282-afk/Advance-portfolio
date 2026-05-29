@@ -113,3 +113,10 @@ function ShootingStars({ count = 12, area = 80 }) {
     </instancedMesh>
   );
 }
+
+export default function Background() {
+  const domeRef = useRef();
+
+  useFrame((state) => {
+    if (domeRef.current) domeRef.current.uTime = state.clock.elapsedTime;
+  });
