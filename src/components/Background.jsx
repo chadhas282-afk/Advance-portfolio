@@ -46,3 +46,8 @@ function ShootingStars({ count = 12, area = 80 }) {
         THREE.MathUtils.randFloatSpread(area / 2),
         THREE.MathUtils.randFloatSpread(area)
       ),
+      velocity: new THREE.Vector3(
+        THREE.MathUtils.randFloat(-1, 1),
+        THREE.MathUtils.randFloat(-0.3, -1.2),
+        THREE.MathUtils.randFloat(-1, 1)
+      ).normalize(),
