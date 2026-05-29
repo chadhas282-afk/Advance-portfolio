@@ -33,3 +33,11 @@ const GradientDomeMaterial = shaderMaterial(
   }
   `
 );
+
+extend({ GradientDomeMaterial });
+
+function ShootingStars({ count = 12, area = 80 }) {
+  const instancedRef = useRef();
+  const dummy = useMemo(() => new THREE.Object3D(), []);
+  const data = useMemo(() => {
+    return new Array(count).fill().map(() => ({
