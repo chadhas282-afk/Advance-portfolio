@@ -18,4 +18,9 @@ const GradientDomeMaterial = shaderMaterial(
     vWorldPosition = worldPosition.xyz;
     gl_Position = projectionMatrix * viewMatrix * worldPosition;
   }
-  `,
+  `, `
+  varying vec3 vWorldPosition;
+  uniform float uTime;
+  uniform vec3 uColorTop;
+  uniform vec3 uColorMid;
+  uniform vec3 uColorBottom;
