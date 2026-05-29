@@ -63,3 +63,9 @@ function ShootingStars({ count = 12, area = 80 }) {
       THREE.MathUtils.randFloatSpread(area),
       THREE.MathUtils.randFloat(area * 0.2, area * 0.5),
       THREE.MathUtils.randFloatSpread(area)
+       );
+    star.velocity.set(
+      THREE.MathUtils.randFloat(-1, 1),
+      THREE.MathUtils.randFloat(-0.3, -1.2),
+      THREE.MathUtils.randFloat(-1, 1)
+    ).normalize();
