@@ -74,3 +74,8 @@ function ShootingStars({ count = 12, area = 80 }) {
     star.size = THREE.MathUtils.randFloat(0.02, 0.05);
     star.life = THREE.MathUtils.randFloat(1, 2.5);
   };
+
+  useFrame((_, delta) => {
+    data.forEach((star, i) => {
+      star.position.addScaledVector(star.velocity, delta * star.speed);
+      star.life -= delta;
