@@ -24,3 +24,12 @@ const GradientDomeMaterial = shaderMaterial(
   uniform vec3 uColorTop;
   uniform vec3 uColorMid;
   uniform vec3 uColorBottom;
+
+  void main() {
+    float h = normalize(vWorldPosition + vec3(0.0, uTime * 0.05, 0.0)).y;
+    vec3 color = mix(uColorBottom, uColorMid, smoothstep(-0.2, 0.4, h));
+    color = mix(color, uColorTop, smoothstep(0.3, 1.0, h));
+    gl_FragColor = vec4(color, 1.0);
+  }
+  `
+);
