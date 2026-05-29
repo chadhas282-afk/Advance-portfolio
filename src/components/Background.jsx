@@ -88,3 +88,8 @@ function ShootingStars({ count = 12, area = 80 }) {
       ) {
         resetStar(star);
       }
+
+      dummy.position.copy(star.position);
+      dummy.scale.set(star.size, star.length, star.size);
+      dummy.lookAt(star.position.clone().add(star.velocity));
+      dummy.updateMatrix();
