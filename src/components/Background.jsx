@@ -41,3 +41,8 @@ function ShootingStars({ count = 12, area = 80 }) {
   const dummy = useMemo(() => new THREE.Object3D(), []);
   const data = useMemo(() => {
     return new Array(count).fill().map(() => ({
+        position: new THREE.Vector3(
+        THREE.MathUtils.randFloatSpread(area),
+        THREE.MathUtils.randFloatSpread(area / 2),
+        THREE.MathUtils.randFloatSpread(area)
+      ),
