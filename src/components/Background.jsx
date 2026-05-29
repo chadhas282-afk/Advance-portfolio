@@ -99,3 +99,11 @@ function ShootingStars({ count = 12, area = 80 }) {
 
     instancedRef.current.instanceMatrix.needsUpdate = true;
   });
+
+  return (
+    <instancedMesh ref={instancedRef} args={[null, null, count]}>
+      <cylinderGeometry args={[1, 1, 1, 6, 1, true]} />
+      <meshBasicMaterial
+        color="#8b5cf6"
+        transparent
+        opacity={0.9}
