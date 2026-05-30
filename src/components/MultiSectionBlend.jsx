@@ -21,3 +21,9 @@ const MultiSectionBlendMaterial = shaderMaterial(
     gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
   }
   `,
+    `
+  varying vec2 vUv;
+  uniform float uTime;
+  uniform float uProgress;
+  uniform vec3 uColor1;
+  uniform vec3 uColor2;
