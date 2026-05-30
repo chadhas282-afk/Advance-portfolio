@@ -27,3 +27,6 @@ const MultiSectionBlendMaterial = shaderMaterial(
   uniform float uProgress;
   uniform vec3 uColor1;
   uniform vec3 uColor2;
+    uniform vec3 uColor3;
+  uniform vec3 uColor4;
+  uniform vec3 uColor5;
