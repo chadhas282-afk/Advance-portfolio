@@ -15,3 +15,10 @@ export default function CinematicCamera() {
       THREE.MathUtils.lerp(0.2, -0.6, t),
       THREE.MathUtils.lerp(5, 3.2, t)
     );
+
+    camera.position.lerp(target, 0.05);
+    camera.lookAt(0, 0, 0);
+  });
+
+  return null;
+}
