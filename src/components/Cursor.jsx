@@ -21,3 +21,12 @@ export default function Cursor() {
       animationFrameId = requestAnimationFrame(render);
     };
     render();
+
+    return () => {
+      window.removeEventListener('mousemove', onMouseMove);
+      cancelAnimationFrame(animationFrameId);
+    };
+  }, []);
+
+  return <div ref={cursorRef} className="custom-cursor" />;
+}
