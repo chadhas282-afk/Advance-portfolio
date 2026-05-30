@@ -6,3 +6,6 @@ export default function Cursor() {
   useEffect(() => {
     const cursor = cursorRef.current;
     if (!cursor) return;
+
+    let mouseX = window.innerWidth / 2;
+    let mouseY = window.innerHeight / 2;
