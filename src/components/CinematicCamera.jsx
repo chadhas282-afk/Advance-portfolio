@@ -7,3 +7,11 @@ const target = new THREE.Vector3();
 export default function CinematicCamera() {
   const { camera } = useThree();
   const scroll = useScroll();
+
+  useFrame(() => {
+    const t = scroll.offset;
+    target.set(
+      THREE.MathUtils.lerp(0, 1.6, t),
+      THREE.MathUtils.lerp(0.2, -0.6, t),
+      THREE.MathUtils.lerp(5, 3.2, t)
+    );
