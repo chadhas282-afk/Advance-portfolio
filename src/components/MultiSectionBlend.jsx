@@ -14,3 +14,10 @@ const MultiSectionBlendMaterial = shaderMaterial(
     uColor4: new THREE.Color('#111827'),
     uColor5: new THREE.Color('#1f2937'),
   },
+   `
+  varying vec2 vUv;
+  void main() {
+    vUv = uv;
+    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+  }
+  `,
