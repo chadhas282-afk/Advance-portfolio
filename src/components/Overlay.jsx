@@ -37,3 +37,10 @@ export default function Overlay() {
       <section className="section flex-center text-center">
         <FadeUp><span className="label">Full Stack Developer / Open Source Enthusiast</span></FadeUp>
         <div className="hero-title">
+            {PORTFOLIO.name.split('').map((char, i) => (
+            <motion.span key={i} initial={{ opacity: 0, y: 80 }} whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.05, duration: 1, ease: [0.16, 1, 0.3, 1] }} className="inline-block"
+            >
+              {char === " " ? "\u00A0" : char}
+            </motion.span>
+          ))}
