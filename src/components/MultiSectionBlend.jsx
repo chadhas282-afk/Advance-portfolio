@@ -74,3 +74,9 @@ export default function MultiSectionBlend() {
   const materialRef = useRef();
   const scroll = useScroll();
   const { viewport } = useThree();
+
+  useFrame((state) => {
+    if (!materialRef.current) return;
+    materialRef.current.uTime = state.clock.elapsedTime;
+    materialRef.current.uProgress = scroll.offset;
+  });
