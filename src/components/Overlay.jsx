@@ -30,3 +30,10 @@ const FadeUp = ({ children, delay = 0, className = "" }) => (
     {children}
   </motion.div>
 );
+
+export default function Overlay() {
+  return (
+    <div className="overlay">
+      <section className="section flex-center text-center">
+        <FadeUp><span className="label">Full Stack Developer / Open Source Enthusiast</span></FadeUp>
+        <div className="hero-title">
