@@ -61,3 +61,12 @@ export default function Overlay() {
           <FadeUp delay={0.1}><h2 className="section-title">Timeline.</h2></FadeUp>
           <motion.div className="divider" initial={{ scaleX: 0 }} whileInView={{ scaleX: 1 }} transition={{ duration: 1.5, ease: "easeInOut" }} />
           <div className="mt-4">
+            {PORTFOLIO.experience.map((job, i) => (
+              <FadeUp key={i} delay={0.2 + (i * 0.1)} className="job-row">
+                <div>
+                  <h3 className="job-company">{job.title}</h3>
+                  <p className="job-role">{job.desc}</p>
+                </div>
+                <span className="job-duration">{job.duration}</span>
+              </FadeUp>
+            ))}
