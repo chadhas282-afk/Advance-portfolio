@@ -76,3 +76,5 @@ export default function Overlay() {
       <section className="section flex-start">
         <div className="w-two-thirds">
           <FadeUp><span className="label">02. Selected Works</span></FadeUp>
+          <FadeUp delay={0.1}><h2 className="section-title">TOP PROJECTS.</h2></FadeUp>
+          <motion.div className="divider" initial={{ scaleX: 0 }} whileInView={{ scaleX: 1 }} transition={{ duration: 1.5 }} />
