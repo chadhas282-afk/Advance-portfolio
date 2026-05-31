@@ -11,3 +11,8 @@ const PORTFOLIO = {
     { id: '05', name: 'Nebula Strike', role: 'Game Engine', year: '2026', tech: 'Game Dev', img: '/projects/nebula.png', link: 'https://github.com/chadhas282-afk/Nebula-Strike' },
     { id: '06', name: 'Chat-Terminal', role: 'Real-time Stack', year: '2026', tech: 'Comm Tool', img: '/projects/chat-terminal.png', link: 'https://github.com/chadhas282-afk/Chat-Terminal' }
   ],
+  experience: [
+    { title: 'Lead Developer', desc: 'Directing architecture for next-gen scalable React applications.', duration: '2026' },
+    { title: 'Full Stack Architect', desc: 'Scaling high-performance applications with React and Python.', duration: '2026' },
+    { title: 'Open Source Lead', desc: 'Contributing to various community projects and building developer tools.', duration: '2025' }
+  ],
