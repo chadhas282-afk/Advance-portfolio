@@ -59,3 +59,11 @@ const MultiSectionBlendMaterial = shaderMaterial(
     vec2 uv = vUv;
     float n = noise(uv * 4.0 + uTime * 0.2);
     float p = clamp(uProgress + (n - 0.5) * 0.08, 0.0, 1.0);
+
+    vec3 color = sectionColor(p);
+    float alpha = 0.45;
+
+    gl_FragColor = vec4(color, alpha);
+  }
+  `
+);
