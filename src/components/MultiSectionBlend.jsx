@@ -54,3 +54,8 @@ const MultiSectionBlendMaterial = shaderMaterial(
     if (p < 0.75) return mix(uColor3, uColor4, smoothstep(0.50, 0.75, p));
     return mix(uColor4, uColor5, smoothstep(0.75, 1.0, p));
   }
+
+  void main() {
+    vec2 uv = vUv;
+    float n = noise(uv * 4.0 + uTime * 0.2);
+    float p = clamp(uProgress + (n - 0.5) * 0.08, 0.0, 1.0);
