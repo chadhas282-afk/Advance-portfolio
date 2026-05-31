@@ -21,3 +21,12 @@ const PORTFOLIO = {
     "Open Source", "Scalable Architecture", "UI/UX", "System Design"
   ]
 };
+
+const FadeUp = ({ children, delay = 0, className = "" }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1, delay, ease: [0.16, 1, 0.3, 1] }} className={className}
+  >
+    {children}
+  </motion.div>
+);
