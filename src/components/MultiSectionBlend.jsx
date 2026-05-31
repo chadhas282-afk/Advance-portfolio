@@ -47,3 +47,10 @@ const MultiSectionBlendMaterial = shaderMaterial(
            (c - a) * u.y * (1.0 - u.x) +
            (d - b) * u.x * u.y;
   }
+
+  vec3 sectionColor(float p) {
+    if (p < 0.25) return mix(uColor1, uColor2, smoothstep(0.0, 0.25, p));
+    if (p < 0.50) return mix(uColor2, uColor3, smoothstep(0.25, 0.50, p));
+    if (p < 0.75) return mix(uColor3, uColor4, smoothstep(0.50, 0.75, p));
+    return mix(uColor4, uColor5, smoothstep(0.75, 1.0, p));
+  }
