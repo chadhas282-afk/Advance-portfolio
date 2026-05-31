@@ -44,3 +44,10 @@ export default function Overlay() {
               {char === " " ? "\u00A0" : char}
             </motion.span>
           ))}
+          </div>
+        <FadeUp delay={0.4}><p className="hero-subtitle" style={{ whiteSpace: 'pre-line', margin: '2rem auto' }}>{PORTFOLIO.subtitle}</p></FadeUp>
+        <FadeUp delay={0.6}>
+           <div style={{ display: 'flex', gap: '2rem', justifyContent: 'center', marginTop: '1rem', color: '#818cf8', fontWeight: 'bold' }}>
+             <span>47 Repositories</span>
+             <span>1000+ Commits</span>
+             <span>GitHub Pro</span>
