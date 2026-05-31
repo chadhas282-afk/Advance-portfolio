@@ -16,3 +16,8 @@ const PORTFOLIO = {
     { title: 'Full Stack Architect', desc: 'Scaling high-performance applications with React and Python.', duration: '2026' },
     { title: 'Open Source Lead', desc: 'Contributing to various community projects and building developer tools.', duration: '2025' }
   ],
+  skills: [
+    "React", "Python", "TypeScript", "JavaScript", "Node.js", "Full Stack", 
+    "Open Source", "Scalable Architecture", "UI/UX", "System Design"
+  ]
+};
