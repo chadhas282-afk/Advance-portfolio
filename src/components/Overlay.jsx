@@ -54,3 +54,10 @@ export default function Overlay() {
               </div>
         </FadeUp>
       </section>
+
+    <section className="section flex-end">
+        <div className="glass-card w-half">
+          <FadeUp><span className="label">01. Background</span></FadeUp>
+          <FadeUp delay={0.1}><h2 className="section-title">Timeline.</h2></FadeUp>
+          <motion.div className="divider" initial={{ scaleX: 0 }} whileInView={{ scaleX: 1 }} transition={{ duration: 1.5, ease: "easeInOut" }} />
+          <div className="mt-4">
