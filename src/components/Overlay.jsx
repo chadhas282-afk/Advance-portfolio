@@ -51,3 +51,6 @@ export default function Overlay() {
              <span>47 Repositories</span>
              <span>1000+ Commits</span>
              <span>GitHub Pro</span>
+              </div>
+        </FadeUp>
+      </section>
