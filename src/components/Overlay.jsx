@@ -70,3 +70,9 @@ export default function Overlay() {
                 <span className="job-duration">{job.duration}</span>
               </FadeUp>
             ))}
+            </div>
+        </div>
+      </section>
+      <section className="section flex-start">
+        <div className="w-two-thirds">
+          <FadeUp><span className="label">02. Selected Works</span></FadeUp>
