@@ -80,3 +80,11 @@ export default function MultiSectionBlend() {
     materialRef.current.uTime = state.clock.elapsedTime;
     materialRef.current.uProgress = scroll.offset;
   });
+
+  return (
+    <mesh position={[0, 0, 1.5]} renderOrder={9}>
+      <planeGeometry args={[viewport.width, viewport.height]} />
+      <multiSectionBlendMaterial ref={materialRef} transparent depthWrite={false} />
+    </mesh>
+  );
+}
