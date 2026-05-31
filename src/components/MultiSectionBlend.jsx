@@ -67,3 +67,10 @@ const MultiSectionBlendMaterial = shaderMaterial(
   }
   `
 );
+
+extend({ MultiSectionBlendMaterial });
+
+export default function MultiSectionBlend() {
+  const materialRef = useRef();
+  const scroll = useScroll();
+  const { viewport } = useThree();
