@@ -95,3 +95,11 @@ export default function Overlay() {
                     />
                   </div>
                 </FadeUp>
+                 </a>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="section flex-end text-right">
+        <div className="w-half">
+          <FadeUp><span className="label">03. Expertise</span></FadeUp>
