@@ -11,3 +11,8 @@ export default function Scene() {
   const light1Ref = useRef();
   const light2Ref = useRef();
   const scroll = useScroll();
+  const tl = useRef();
+  const { viewport } = useThree();
+
+  useLayoutEffect(() => {
+    tl.current = gsap.timeline();
