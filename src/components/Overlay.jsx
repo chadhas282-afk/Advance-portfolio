@@ -83,3 +83,7 @@ export default function Overlay() {
               <a href={project.link} target="_blank" rel="noreferrer" style={{ textDecoration: 'none', color: 'inherit' }} key={project.id}>
                 <FadeUp delay={0.1 * i} className="project-row group">
                   <span className="project-id">{project.id}</span>
+                  <div className="project-info">
+                    <h3 className="project-name">{project.name}</h3>
+                    <p className="project-tech">{project.tech} — {project.role}</p>
+                  </div>
