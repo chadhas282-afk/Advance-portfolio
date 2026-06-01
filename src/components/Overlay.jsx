@@ -103,3 +103,11 @@ export default function Overlay() {
       <section className="section flex-end text-right">
         <div className="w-half">
           <FadeUp><span className="label">03. Expertise</span></FadeUp>
+          <FadeUp delay={0.1}><h2 className="section-title">Skills & Stack.</h2></FadeUp>
+          <motion.div className="divider" initial={{ scaleX: 0 }} whileInView={{ scaleX: 1 }} transition={{ duration: 1.5 }} />
+          
+          <div className="mt-8" style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'flex-end' }}>
+            {PORTFOLIO.skills.map((skill, i) => (
+              <FadeUp key={skill} delay={0.1 + (i * 0.05)}>
+                <div 
+                  className="glass-card magnetic" 
