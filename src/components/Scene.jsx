@@ -22,3 +22,9 @@ export default function Scene() {
     tl.current.to(groupRef.current.rotation, { x: 0, y: Math.PI, z: 0.5 }, 1);
     tl.current.to(groupRef.current.position, { x: 0, y: 0, z: 3.5 }, 2);
   }, []);
+
+  useFrame((state) => {
+    tl.current.seek(scroll.offset * tl.current.duration());
+    const targetX = (state.pointer.x * viewport.width) / 10;
+    const targetY = (state.pointer.y * viewport.height) / 10;
+    if (meshRef.current) {
