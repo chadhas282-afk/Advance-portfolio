@@ -122,3 +122,9 @@ export default function Overlay() {
                     transition: 'all 0.3s ease',
                     cursor: 'none'
                   }}
+                   onMouseEnter={(e) => {
+                    e.currentTarget.style.color = '#ffffff';
+                    e.currentTarget.style.borderColor = '#818cf8';
+                    e.currentTarget.style.background = 'rgba(129, 140, 248, 0.1)';
+                    e.currentTarget.style.transform = 'scale(1.05)';
+                  }}
