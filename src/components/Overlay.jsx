@@ -87,3 +87,11 @@ export default function Overlay() {
                     <h3 className="project-name">{project.name}</h3>
                     <p className="project-tech">{project.tech} — {project.role}</p>
                   </div>
+                  <div className="project-preview">
+                    <img 
+                      src={project.img} 
+                      alt={project.name} 
+                      style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+                    />
+                  </div>
+                </FadeUp>
