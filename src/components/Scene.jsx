@@ -28,3 +28,9 @@ export default function Scene() {
     const targetX = (state.pointer.x * viewport.width) / 10;
     const targetY = (state.pointer.y * viewport.height) / 10;
     if (meshRef.current) {
+        meshRef.current.rotation.y = THREE.MathUtils.lerp(meshRef.current.rotation.y, targetX, 0.03);
+      meshRef.current.rotation.x = THREE.MathUtils.lerp(meshRef.current.rotation.x, -targetY, 0.03);
+    }
+    if (glassRef.current) {
+      glassRef.current.distortion = 0.3 + Math.sin(state.clock.elapsedTime * 1.2) * 0.1;
+    }
