@@ -128,3 +128,10 @@ export default function Overlay() {
                     e.currentTarget.style.background = 'rgba(129, 140, 248, 0.1)';
                     e.currentTarget.style.transform = 'scale(1.05)';
                   }}
+                   onMouseLeave={(e) => {
+                    e.currentTarget.style.color = '#a1a1aa';
+                    e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)';
+                    e.currentTarget.style.background = 'rgba(255,255,255,0.02)';
+                    e.currentTarget.style.transform = 'scale(1)';
+                  }}
+                >
