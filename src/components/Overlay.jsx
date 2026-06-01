@@ -111,3 +111,14 @@ export default function Overlay() {
               <FadeUp key={skill} delay={0.1 + (i * 0.05)}>
                 <div 
                   className="glass-card magnetic" 
+                   style={{ 
+                    padding: '0.8rem 1.5rem', 
+                    borderRadius: '50px', 
+                    fontSize: '1.1rem', 
+                    fontWeight: '600', 
+                    color: '#a1a1aa',
+                    border: '1px solid rgba(255,255,255,0.1)',
+                    background: 'rgba(255,255,255,0.02)',
+                    transition: 'all 0.3s ease',
+                    cursor: 'none'
+                  }}
