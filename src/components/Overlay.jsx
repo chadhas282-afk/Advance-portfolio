@@ -146,4 +146,8 @@ export default function Overlay() {
 <section className="section flex-center text-center">
         <FadeUp><span className="label">04. Availability</span></FadeUp>
         <FadeUp delay={0.1}><h1 className="hero-title mb-10" style={{ fontSize: '7vw', mixBlendMode: 'normal' }}>Let's Talk.</h1></FadeUp>
-        <FadeUp delay={0.3} className="flex-center"></FadeUp>
+        <FadeUp delay={0.3} className="flex-center">
+           <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center' }}>
+            <motion.a href="mailto:chadhas282@gmail.com" className="contact-btn magnetic" style={{ textDecoration: 'none', display: 'inline-block' }} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              Email Me
+            </motion.a>
