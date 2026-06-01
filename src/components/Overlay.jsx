@@ -78,3 +78,8 @@ export default function Overlay() {
           <FadeUp><span className="label">02. Selected Works</span></FadeUp>
           <FadeUp delay={0.1}><h2 className="section-title">TOP PROJECTS.</h2></FadeUp>
           <motion.div className="divider" initial={{ scaleX: 0 }} whileInView={{ scaleX: 1 }} transition={{ duration: 1.5 }} />
+ <div className="project-list mt-8" style={{ maxHeight: '55vh', overflowY: 'auto', paddingRight: '1rem' }}>
+            {PORTFOLIO.projects.map((project, i) => (
+              <a href={project.link} target="_blank" rel="noreferrer" style={{ textDecoration: 'none', color: 'inherit' }} key={project.id}>
+                <FadeUp delay={0.1 * i} className="project-row group">
+                  <span className="project-id">{project.id}</span>
