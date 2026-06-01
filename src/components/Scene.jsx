@@ -8,3 +8,6 @@ export default function Scene() {
   const meshRef = useRef();
   const groupRef = useRef();
   const glassRef = useRef();
+  const light1Ref = useRef();
+  const light2Ref = useRef();
+  const scroll = useScroll();
