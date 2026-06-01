@@ -135,3 +135,10 @@ export default function Overlay() {
                     e.currentTarget.style.transform = 'scale(1)';
                   }}
                 >
+                  {skill}
+                </div>
+              </FadeUp>
+            ))}
+          </div>
+        </div>
+      </section>
