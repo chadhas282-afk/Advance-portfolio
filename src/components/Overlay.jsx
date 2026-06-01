@@ -142,3 +142,8 @@ export default function Overlay() {
           </div>
         </div>
       </section>
+
+<section className="section flex-center text-center">
+        <FadeUp><span className="label">04. Availability</span></FadeUp>
+        <FadeUp delay={0.1}><h1 className="hero-title mb-10" style={{ fontSize: '7vw', mixBlendMode: 'normal' }}>Let's Talk.</h1></FadeUp>
+        <FadeUp delay={0.3} className="flex-center"></FadeUp>
