@@ -154,3 +154,12 @@ export default function Overlay() {
             <motion.a href="https://github.com/chadhas282-afk" target="_blank" rel="noreferrer" className="contact-btn outline magnetic" style={{ textDecoration: 'none' }} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               GitHub
             </motion.a>
+            <motion.a href="https://linkedin.com/in/chadha-sahil" target="_blank" rel="noreferrer" className="contact-btn outline magnetic" style={{ textDecoration: 'none' }} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              LinkedIn
+            </motion.a>
+          </div>
+        </FadeUp>
+      </section>
+    </div>
+  );
+}
