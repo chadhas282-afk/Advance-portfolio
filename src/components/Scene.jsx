@@ -41,3 +41,9 @@ export default function Scene() {
       light2Ref.current.position.y = Math.cos(state.clock.elapsedTime * 0.5) * 2;
     }
   });
+  return (
+    <group ref={groupRef}>
+      <pointLight ref={light1Ref} color="#4f46e5" intensity={4} distance={10} />
+      <pointLight ref={light2Ref} color="#e879f9" intensity={3} distance={10} />
+      <Float speed={2} rotationIntensity={1.5} floatIntensity={2}>
+        <mesh ref={meshRef}>
