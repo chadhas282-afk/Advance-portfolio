@@ -34,3 +34,10 @@ export default function Scene() {
     if (glassRef.current) {
       glassRef.current.distortion = 0.3 + Math.sin(state.clock.elapsedTime * 1.2) * 0.1;
     }
+        if (light1Ref.current && light2Ref.current) {
+      light1Ref.current.position.x = Math.sin(state.clock.elapsedTime) * 3;
+      light1Ref.current.position.z = Math.cos(state.clock.elapsedTime) * 3;
+      light2Ref.current.position.x = Math.sin(state.clock.elapsedTime + Math.PI) * 3;
+      light2Ref.current.position.y = Math.cos(state.clock.elapsedTime * 0.5) * 2;
+    }
+  });
