@@ -62,3 +62,9 @@ export default function Scene() {
             clearcoat={1}
             attenuationDistance={0.5}
             attenuationColor="#ffffff"
+             />
+        </mesh>
+      </Float>
+    </group>
+  );
+}
