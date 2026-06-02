@@ -11,3 +11,11 @@ const LiquidTransitionMaterial = shaderMaterial(
     uColorA: new THREE.Color('#0b0f1a'),
     uColorB: new THREE.Color('#6366f1'),
   },
+   `
+  varying vec2 vUv;
+  void main() {
+    vUv = uv;
+    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+  }
+  `,
+  `
