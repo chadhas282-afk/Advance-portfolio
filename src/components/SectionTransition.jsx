@@ -19,3 +19,8 @@ const LiquidTransitionMaterial = shaderMaterial(
   }
   `,
   `
+    varying vec2 vUv;
+  uniform float uTime;
+  uniform float uProgress;
+  uniform vec3 uColorA;
+  uniform vec3 uColorB;
