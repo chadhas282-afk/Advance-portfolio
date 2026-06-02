@@ -10,3 +10,7 @@ export default function ScrollProgress() {
     if (barRef.current) {
       barRef.current.style.transform = `scaleX(${scroll.offset})`;
     }
+      });
+
+  return <div ref={barRef} className="scroll-progress" />;
+}
