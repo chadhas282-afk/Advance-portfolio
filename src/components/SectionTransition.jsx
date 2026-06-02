@@ -24,3 +24,11 @@ const LiquidTransitionMaterial = shaderMaterial(
   uniform float uProgress;
   uniform vec3 uColorA;
   uniform vec3 uColorB;
+
+  float random(vec2 st) {
+    return fract(sin(dot(st.xy, vec2(12.9898,78.233))) * 43758.5453123);
+  }
+
+  float noise(vec2 st) {
+    vec2 i = floor(st);
+    vec2 f = fract(st);
