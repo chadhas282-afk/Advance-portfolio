@@ -52,3 +52,8 @@ export default function Scene() {
             ref={glassRef}
             transmission={1}
             thickness={2.5} 
+            roughness={0.05}    
+            ior={1.45}        
+            chromaticAberration={0.08}
+            distortion={0.3}
+            distortionScale={0.3}
