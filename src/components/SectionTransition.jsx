@@ -44,3 +44,17 @@ const LiquidTransitionMaterial = shaderMaterial(
            (c - a) * u.y * (1.0 - u.x) +
            (d - b) * u.x * u.y;
   }
+
+  void main() {
+    vec2 uv = vUv;
+    float n = noise(uv * 4.0 + uTime * 0.2);
+    float edge = uProgress;
+    float mask = smoothstep(edge - 0.15, edge + 0.15, n);
+
+    vec3 color = mix(uColorA, uColorB, n);
+    float alpha = mask * 0.4;
+
+    gl_FragColor = vec4(color, alpha);
+  }
+  `
+);
