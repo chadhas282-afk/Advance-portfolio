@@ -47,3 +47,8 @@ export default function Scene() {
       <pointLight ref={light2Ref} color="#e879f9" intensity={3} distance={10} />
       <Float speed={2} rotationIntensity={1.5} floatIntensity={2}>
         <mesh ref={meshRef}>
+          <torusKnotGeometry args={[0.9, 0.3, 256, 64]} />
+          <MeshTransmissionMaterial
+            ref={glassRef}
+            transmission={1}
+            thickness={2.5} 
