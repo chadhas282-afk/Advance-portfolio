@@ -57,3 +57,8 @@ export default function Scene() {
             chromaticAberration={0.08}
             distortion={0.3}
             distortionScale={0.3}
+             temporalDistortion={0.2}
+            color="#ffffff"    
+            clearcoat={1}
+            attenuationDistance={0.5}
+            attenuationColor="#ffffff"
