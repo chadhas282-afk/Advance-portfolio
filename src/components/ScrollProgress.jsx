@@ -5,3 +5,8 @@ import { useRef } from 'react';
 export default function ScrollProgress() {
   const scroll = useScroll();
   const barRef = useRef();
+
+    useFrame(() => {
+    if (barRef.current) {
+      barRef.current.style.transform = `scaleX(${scroll.offset})`;
+    }
