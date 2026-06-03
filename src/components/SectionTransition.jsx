@@ -69,3 +69,9 @@ export default function SectionTransition() {
   useFrame((state) => {
     if (!materialRef.current) return;
     materialRef.current.uTime = state.clock.elapsedTime;
+     materialRef.current.uProgress = scroll.offset;
+  });
+
+  return (
+    <mesh position={[0, 0, 2]} renderOrder={10}>
+      <planeGeometry args={[viewport.width, viewport.height]} />
