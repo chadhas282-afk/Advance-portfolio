@@ -58,3 +58,9 @@ const LiquidTransitionMaterial = shaderMaterial(
   }
   `
 );
+
+extend({ LiquidTransitionMaterial });
+
+export default function SectionTransition() {
+  const materialRef = useRef();
+  const scroll = useScroll();
