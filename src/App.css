@@ -89,3 +89,14 @@ button,
   margin-bottom: 1.5rem;
   display: block;
 }
+
+.hero-title {
+  font-size: 9vw;
+  font-weight: 900;
+  letter-spacing: -0.06em;
+  line-height: 0.9;
+  text-transform: uppercase;
+  margin: 0;
+  mix-blend-mode: exclusion;
+  color: #ffffff;
+}
