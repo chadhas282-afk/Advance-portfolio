@@ -79,3 +79,13 @@ button,
   width: 66%;
   min-width: 320px;
 }
+
+.label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-weight: 600;
+  color: #818cf8;
+  margin-bottom: 1.5rem;
+  display: block;
+}
