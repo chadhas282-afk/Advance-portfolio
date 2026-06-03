@@ -14,20 +14,20 @@ const MultiSectionBlendMaterial = shaderMaterial(
     uColor4: new THREE.Color('#111827'),
     uColor5: new THREE.Color('#1f2937'),
   },
-   `
+  `
   varying vec2 vUv;
   void main() {
     vUv = uv;
     gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
   }
   `,
-    `
+  `
   varying vec2 vUv;
   uniform float uTime;
   uniform float uProgress;
   uniform vec3 uColor1;
   uniform vec3 uColor2;
-    uniform vec3 uColor3;
+  uniform vec3 uColor3;
   uniform vec3 uColor4;
   uniform vec3 uColor5;
 
@@ -39,7 +39,7 @@ const MultiSectionBlendMaterial = shaderMaterial(
     vec2 i = floor(st);
     vec2 f = fract(st);
     float a = random(i);
-        float b = random(i + vec2(1.0, 0.0));
+    float b = random(i + vec2(1.0, 0.0));
     float c = random(i + vec2(0.0, 1.0));
     float d = random(i + vec2(1.0, 1.0));
     vec2 u = f * f * (3.0 - 2.0 * f);

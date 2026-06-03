@@ -34,28 +34,29 @@ const FadeUp = ({ children, delay = 0, className = "" }) => (
 export default function Overlay() {
   return (
     <div className="overlay">
+      
       <section className="section flex-center text-center">
         <FadeUp><span className="label">Full Stack Developer / Open Source Enthusiast</span></FadeUp>
         <div className="hero-title">
-            {PORTFOLIO.name.split('').map((char, i) => (
+          {PORTFOLIO.name.split('').map((char, i) => (
             <motion.span key={i} initial={{ opacity: 0, y: 80 }} whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.05, duration: 1, ease: [0.16, 1, 0.3, 1] }} className="inline-block"
             >
               {char === " " ? "\u00A0" : char}
             </motion.span>
           ))}
-          </div>
+        </div>
         <FadeUp delay={0.4}><p className="hero-subtitle" style={{ whiteSpace: 'pre-line', margin: '2rem auto' }}>{PORTFOLIO.subtitle}</p></FadeUp>
         <FadeUp delay={0.6}>
            <div style={{ display: 'flex', gap: '2rem', justifyContent: 'center', marginTop: '1rem', color: '#818cf8', fontWeight: 'bold' }}>
              <span>47 Repositories</span>
              <span>1000+ Commits</span>
              <span>GitHub Pro</span>
-              </div>
+           </div>
         </FadeUp>
       </section>
 
-    <section className="section flex-end">
+      <section className="section flex-end">
         <div className="glass-card w-half">
           <FadeUp><span className="label">01. Background</span></FadeUp>
           <FadeUp delay={0.1}><h2 className="section-title">Timeline.</h2></FadeUp>
@@ -70,7 +71,7 @@ export default function Overlay() {
                 <span className="job-duration">{job.duration}</span>
               </FadeUp>
             ))}
-            </div>
+          </div>
         </div>
       </section>
       <section className="section flex-start">
@@ -78,7 +79,8 @@ export default function Overlay() {
           <FadeUp><span className="label">02. Selected Works</span></FadeUp>
           <FadeUp delay={0.1}><h2 className="section-title">TOP PROJECTS.</h2></FadeUp>
           <motion.div className="divider" initial={{ scaleX: 0 }} whileInView={{ scaleX: 1 }} transition={{ duration: 1.5 }} />
- <div className="project-list mt-8" style={{ maxHeight: '55vh', overflowY: 'auto', paddingRight: '1rem' }}>
+
+          <div className="project-list mt-8" style={{ maxHeight: '55vh', overflowY: 'auto', paddingRight: '1rem' }}>
             {PORTFOLIO.projects.map((project, i) => (
               <a href={project.link} target="_blank" rel="noreferrer" style={{ textDecoration: 'none', color: 'inherit' }} key={project.id}>
                 <FadeUp delay={0.1 * i} className="project-row group">
@@ -95,7 +97,7 @@ export default function Overlay() {
                     />
                   </div>
                 </FadeUp>
-                 </a>
+              </a>
             ))}
           </div>
         </div>
@@ -111,7 +113,7 @@ export default function Overlay() {
               <FadeUp key={skill} delay={0.1 + (i * 0.05)}>
                 <div 
                   className="glass-card magnetic" 
-                   style={{ 
+                  style={{ 
                     padding: '0.8rem 1.5rem', 
                     borderRadius: '50px', 
                     fontSize: '1.1rem', 
@@ -122,13 +124,13 @@ export default function Overlay() {
                     transition: 'all 0.3s ease',
                     cursor: 'none'
                   }}
-                   onMouseEnter={(e) => {
+                  onMouseEnter={(e) => {
                     e.currentTarget.style.color = '#ffffff';
                     e.currentTarget.style.borderColor = '#818cf8';
                     e.currentTarget.style.background = 'rgba(129, 140, 248, 0.1)';
                     e.currentTarget.style.transform = 'scale(1.05)';
                   }}
-                   onMouseLeave={(e) => {
+                  onMouseLeave={(e) => {
                     e.currentTarget.style.color = '#a1a1aa';
                     e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)';
                     e.currentTarget.style.background = 'rgba(255,255,255,0.02)';
@@ -143,11 +145,11 @@ export default function Overlay() {
         </div>
       </section>
 
-<section className="section flex-center text-center">
+      <section className="section flex-center text-center">
         <FadeUp><span className="label">04. Availability</span></FadeUp>
         <FadeUp delay={0.1}><h1 className="hero-title mb-10" style={{ fontSize: '7vw', mixBlendMode: 'normal' }}>Let's Talk.</h1></FadeUp>
         <FadeUp delay={0.3} className="flex-center">
-           <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center' }}>
+          <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center' }}>
             <motion.a href="mailto:chadhas282@gmail.com" className="contact-btn magnetic" style={{ textDecoration: 'none', display: 'inline-block' }} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               Email Me
             </motion.a>

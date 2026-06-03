@@ -16,7 +16,7 @@ export default function Cursor() {
     };
     window.addEventListener('mousemove', onMouseMove, { passive: true });
     let animationFrameId;
-        const render = () => {
+    const render = () => {
       cursor.style.transform = `translate3d(${mouseX - 12}px, ${mouseY - 12}px, 0)`;
       animationFrameId = requestAnimationFrame(render);
     };

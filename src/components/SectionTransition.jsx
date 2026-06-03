@@ -11,7 +11,7 @@ const LiquidTransitionMaterial = shaderMaterial(
     uColorA: new THREE.Color('#0b0f1a'),
     uColorB: new THREE.Color('#6366f1'),
   },
-   `
+  `
   varying vec2 vUv;
   void main() {
     vUv = uv;
@@ -19,7 +19,7 @@ const LiquidTransitionMaterial = shaderMaterial(
   }
   `,
   `
-    varying vec2 vUv;
+  varying vec2 vUv;
   uniform float uTime;
   uniform float uProgress;
   uniform vec3 uColorA;
@@ -69,13 +69,13 @@ export default function SectionTransition() {
   useFrame((state) => {
     if (!materialRef.current) return;
     materialRef.current.uTime = state.clock.elapsedTime;
-     materialRef.current.uProgress = scroll.offset;
+    materialRef.current.uProgress = scroll.offset;
   });
 
   return (
     <mesh position={[0, 0, 2]} renderOrder={10}>
       <planeGeometry args={[viewport.width, viewport.height]} />
-       <liquidTransitionMaterial ref={materialRef} transparent depthWrite={false} />
+      <liquidTransitionMaterial ref={materialRef} transparent depthWrite={false} />
     </mesh>
   );
 }

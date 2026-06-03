@@ -11,14 +11,15 @@ const GradientDomeMaterial = shaderMaterial(
     uColorMid: new THREE.Color('#1e1b4b'),
     uColorBottom: new THREE.Color('#05060a'),
   },
-    `
+  `
   varying vec3 vWorldPosition;
   void main() {
     vec4 worldPosition = modelMatrix * vec4(position, 1.0);
     vWorldPosition = worldPosition.xyz;
     gl_Position = projectionMatrix * viewMatrix * worldPosition;
   }
-  `, `
+  `,
+  `
   varying vec3 vWorldPosition;
   uniform float uTime;
   uniform vec3 uColorTop;
@@ -41,7 +42,7 @@ function ShootingStars({ count = 12, area = 80 }) {
   const dummy = useMemo(() => new THREE.Object3D(), []);
   const data = useMemo(() => {
     return new Array(count).fill().map(() => ({
-        position: new THREE.Vector3(
+      position: new THREE.Vector3(
         THREE.MathUtils.randFloatSpread(area),
         THREE.MathUtils.randFloatSpread(area / 2),
         THREE.MathUtils.randFloatSpread(area)
@@ -51,7 +52,7 @@ function ShootingStars({ count = 12, area = 80 }) {
         THREE.MathUtils.randFloat(-0.3, -1.2),
         THREE.MathUtils.randFloat(-1, 1)
       ).normalize(),
-       speed: THREE.MathUtils.randFloat(6, 12),
+      speed: THREE.MathUtils.randFloat(6, 12),
       length: THREE.MathUtils.randFloat(3, 6),
       size: THREE.MathUtils.randFloat(0.02, 0.05),
       life: THREE.MathUtils.randFloat(1, 2.5),
@@ -63,7 +64,7 @@ function ShootingStars({ count = 12, area = 80 }) {
       THREE.MathUtils.randFloatSpread(area),
       THREE.MathUtils.randFloat(area * 0.2, area * 0.5),
       THREE.MathUtils.randFloatSpread(area)
-       );
+    );
     star.velocity.set(
       THREE.MathUtils.randFloat(-1, 1),
       THREE.MathUtils.randFloat(-0.3, -1.2),

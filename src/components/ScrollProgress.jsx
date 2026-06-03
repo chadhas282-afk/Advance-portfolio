@@ -6,11 +6,11 @@ export default function ScrollProgress() {
   const scroll = useScroll();
   const barRef = useRef();
 
-    useFrame(() => {
+  useFrame(() => {
     if (barRef.current) {
       barRef.current.style.transform = `scaleX(${scroll.offset})`;
     }
-      });
+  });
 
   return <div ref={barRef} className="scroll-progress" />;
 }

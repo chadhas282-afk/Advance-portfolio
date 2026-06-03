@@ -16,7 +16,7 @@ export default function Scene() {
 
   useLayoutEffect(() => {
     tl.current = gsap.timeline();
-     tl.current.to(groupRef.current.position, { x: -2.5, y: 0, z: 2 }, 0);
+    tl.current.to(groupRef.current.position, { x: -2.5, y: 0, z: 2 }, 0);
     tl.current.to(groupRef.current.rotation, { x: Math.PI / 2, y: 0, z: -0.5 }, 0);
     tl.current.to(groupRef.current.position, { x: 2.5, y: -0.5, z: 1 }, 1);
     tl.current.to(groupRef.current.rotation, { x: 0, y: Math.PI, z: 0.5 }, 1);
@@ -28,19 +28,20 @@ export default function Scene() {
     const targetX = (state.pointer.x * viewport.width) / 10;
     const targetY = (state.pointer.y * viewport.height) / 10;
     if (meshRef.current) {
-        meshRef.current.rotation.y = THREE.MathUtils.lerp(meshRef.current.rotation.y, targetX, 0.03);
+      meshRef.current.rotation.y = THREE.MathUtils.lerp(meshRef.current.rotation.y, targetX, 0.03);
       meshRef.current.rotation.x = THREE.MathUtils.lerp(meshRef.current.rotation.x, -targetY, 0.03);
     }
     if (glassRef.current) {
       glassRef.current.distortion = 0.3 + Math.sin(state.clock.elapsedTime * 1.2) * 0.1;
     }
-        if (light1Ref.current && light2Ref.current) {
+    if (light1Ref.current && light2Ref.current) {
       light1Ref.current.position.x = Math.sin(state.clock.elapsedTime) * 3;
       light1Ref.current.position.z = Math.cos(state.clock.elapsedTime) * 3;
       light2Ref.current.position.x = Math.sin(state.clock.elapsedTime + Math.PI) * 3;
       light2Ref.current.position.y = Math.cos(state.clock.elapsedTime * 0.5) * 2;
     }
   });
+
   return (
     <group ref={groupRef}>
       <pointLight ref={light1Ref} color="#4f46e5" intensity={4} distance={10} />
@@ -51,18 +52,18 @@ export default function Scene() {
           <MeshTransmissionMaterial
             ref={glassRef}
             transmission={1}
-            thickness={2.5} 
+            thickness={2.5}    
             roughness={0.05}    
             ior={1.45}        
             chromaticAberration={0.08}
             distortion={0.3}
             distortionScale={0.3}
-             temporalDistortion={0.2}
+            temporalDistortion={0.2}
             color="#ffffff"    
             clearcoat={1}
             attenuationDistance={0.5}
             attenuationColor="#ffffff"
-             />
+          />
         </mesh>
       </Float>
     </group>
