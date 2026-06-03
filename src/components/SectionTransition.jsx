@@ -64,3 +64,8 @@ extend({ LiquidTransitionMaterial });
 export default function SectionTransition() {
   const materialRef = useRef();
   const scroll = useScroll();
+  const { viewport } = useThree();
+
+  useFrame((state) => {
+    if (!materialRef.current) return;
+    materialRef.current.uTime = state.clock.elapsedTime;
