@@ -75,3 +75,7 @@ export default function SectionTransition() {
   return (
     <mesh position={[0, 0, 2]} renderOrder={10}>
       <planeGeometry args={[viewport.width, viewport.height]} />
+       <liquidTransitionMaterial ref={materialRef} transparent depthWrite={false} />
+    </mesh>
+  );
+}
