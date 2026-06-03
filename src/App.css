@@ -52,3 +52,16 @@ button,
   flex-direction: column;
   justify-content: center;
 }
+
+.flex-center {
+  align-items: center;
+  text-align: center;
+}
+
+.flex-start {
+  align-items: flex-start;
+}
+
+.flex-end {
+  align-items: flex-end;
+}
