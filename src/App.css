@@ -282,3 +282,12 @@ body::after {
   mix-blend-mode: overlay;
   opacity: 0.4;
 }
+
+.hero-title,
+.section-title,
+.project-name {
+  text-shadow:
+    0 0 8px rgba(99, 102, 241, 0.6),
+    0 0 16px rgba(139, 92, 246, 0.5),
+    0 0 24px rgba(59, 130, 246, 0.4);
+}
