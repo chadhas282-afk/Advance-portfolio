@@ -213,3 +213,16 @@ button,
   font-size: 1.2rem;
   color: #818cf8;
 }
+
+.project-name {
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.project-tech {
+  font-size: 1.1rem;
+  color: #a1a1aa;
+  font-weight: 300;
+}
