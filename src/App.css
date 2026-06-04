@@ -353,3 +353,16 @@ body::after {
       0 0 30px rgba(59, 130, 246, 0.2);
   }
 }
+
+.hero-title,
+.section-title,
+.project-name {
+  animation: neonPulse 4s ease-in-out infinite;
+}
+
+.contact-btn,
+.glass-card,
+.project-row:hover,
+.job-row:hover {
+  animation: glowPulse 4s ease-in-out infinite;
+}
