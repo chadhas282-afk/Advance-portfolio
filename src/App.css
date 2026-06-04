@@ -226,3 +226,12 @@ button,
   color: #a1a1aa;
   font-weight: 300;
 }
+
+.project-preview {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%) scale(0.8) rotate(5deg);
+  opacity: 0;
+  width: 260px;
+  height: 160px;
