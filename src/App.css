@@ -254,4 +254,15 @@ button,
   border: none;
   padding: 1.2rem 3rem;
   font-size: 1.1rem;
-  
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: 100px;
+  transition: all 0.3s ease;
+}
+
+.contact-btn.outline {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
