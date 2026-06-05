@@ -376,3 +376,17 @@ body::after {
     font-size: 14vw;
     line-height: 1;
   }
+
+  .section-title {
+    font-size: 10vw;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    max-width: 90%;
+  }
+
+  .w-half,
+  .w-two-thirds {
+    width: 100%;
+  }
