@@ -430,3 +430,13 @@ body::after {
     width: 100%;
     text-align: center;
   }
+
+  .label {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+  }
+
+  .custom-cursor {
+    display: none; 
+  }
+}
