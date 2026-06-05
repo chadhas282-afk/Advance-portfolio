@@ -457,3 +457,12 @@ body::after {
   .project-name {
     font-size: 1.6rem;
   }
+
+  .project-tech {
+    font-size: 0.95rem;
+  }
+
+  .section {
+    padding: 0 5vw;
+  }
+}
