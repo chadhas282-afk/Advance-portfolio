@@ -449,3 +449,11 @@ body::after {
   .section-title {
     font-size: 12vw;
   }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .project-name {
+    font-size: 1.6rem;
+  }
