@@ -366,3 +366,13 @@ body::after {
 .job-row:hover {
   animation: glowPulse 4s ease-in-out infinite;
 }
+
+@media (max-width: 900px) {
+  .section {
+    padding: 0 6vw;
+  }
+
+  .hero-title {
+    font-size: 14vw;
+    line-height: 1;
+  }
