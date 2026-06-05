@@ -415,3 +415,18 @@ body::after {
     height: 200px;
     margin-top: 1rem;
   }
+
+  .project-row:hover .project-preview {
+    transform: none;
+  }
+
+  .job-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .contact-btn {
+    width: 100%;
+    text-align: center;
+  }
