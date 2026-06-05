@@ -440,3 +440,12 @@ body::after {
     display: none; 
   }
 }
+
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 16vw;
+  }
+
+  .section-title {
+    font-size: 12vw;
+  }
